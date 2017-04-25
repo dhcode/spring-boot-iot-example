@@ -1,0 +1,18 @@
+/**
+ * Created by DominikH on 24.04.2017.
+ */
+package com.example.iot.config;
+
+import org.springframework.context.annotation.Configuration;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+    public Docket swaggerApi() {
+        return new Docket(DocumentationType.SWAGGER_2);
+    }
+}
