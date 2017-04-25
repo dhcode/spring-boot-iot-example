@@ -37,7 +37,7 @@ public class SensorController {
 
     @RequestMapping(path="{sensorId}", method = RequestMethod.GET)
     @ApiOperation(value = "Get statistics about the sensor")
-    public SensorStats getSensorStats(@RequestParam("sensorId") long sensorId) {
+    public SensorStats getSensorStats(@PathVariable("sensorId") long sensorId) {
         return sensorsService.getSensorStats(sensorId);
     }
 
